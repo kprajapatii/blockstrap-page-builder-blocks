@@ -272,7 +272,7 @@ class BlockStrap_Widget_Post_Title extends WP_Super_Duper {
 			}
 		}
 
-		$title = esc_html( get_the_title() );
+		$title = wp_kses_post( get_the_title() );
 
 		if ( $title ) {
 			$tag          = ! empty( $args['html_tag'] ) ? esc_attr( $args['html_tag'] ) : 'h2';
